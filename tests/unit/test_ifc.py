@@ -14,3 +14,11 @@ class TestGlobalVars(unittest.TestCase):
         _ifc.WEEKDAYS.should.be.a(list)
         self.assertEqual(len(_ifc.WEEKDAYS) * 4, _ifc.MAX_DAYS)
 
+class TestLeapYear(unittest.TestCase):
+    def test_leap_year(self):
+        self.assertTrue(_ifc.leap_year(2020))
+
+    def test_century_leap_year(self):
+        self.assertFalse(_ifc.leap_year(1700))
+       
+
